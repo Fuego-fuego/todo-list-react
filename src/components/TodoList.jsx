@@ -5,19 +5,19 @@ function TodoList() {
     const [newTodo, setNewTodo] = useState('');
 
     // console.log(todos);
-    const todosElements = todos.map((todo, index) => (
-        <li key={index}> {todo} <span className ="delete-btn" onClick= {handleDeleteTodo}> X </span></li>
-    ));
+    const todosElements = todos.map((todo, index) => {
+return  <li className = "todo-list-item" key={index}> {todo} <span className ="delete-btn" onClick= {handleDeleteTodo}> X </span></li>
+});
     function handleAddTodo() {
-        if (newTodo.trim !== '') {
+        if (newTodo.trim !== ' ') {
             setTodos(() => [...todos, newTodo.trim()]);
         }
     }
     function handleDeleteTodo(index) {
-        const newTodos = [...todos];
-
-        newTodos.splice(index,1);
-        setNewTodo(newTodos);
+        const changeTodos = [...todos];
+        
+        changeTodos.splice(index,1);
+        setTodos(changeTodos);
     }
     return (
         <div>

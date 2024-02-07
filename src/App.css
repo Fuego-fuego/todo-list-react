@@ -27,9 +27,33 @@ input {
 }
 
 ul[role='list'] {
-    text-decoration: none;
+    list-style-type:none;
+    
 }
 
 .form-heading {
     text-align: center;
+}
+
+.delete-btn{
+  
+  border-radius: 8px;
+  border: 2px solid transparent;
+  margin-inline-start:1rem;
+  padding: 0.35em 1.3em;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: inherit;
+  background-color: #141414;
+  color:white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.todo-list-item{
+  margin-block-start: 0.7rem;
+  display:flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
 }
